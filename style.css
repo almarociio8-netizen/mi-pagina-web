@@ -140,7 +140,7 @@ body {
 }
 
 .welcome-1{
-    background-image: url(images/img.jpeg);
+    background-image: url(img.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -255,7 +255,7 @@ td{
 }
 
 .prices-2{
-    background-image: url(images/img5.jpeg);
+    background-image: url(img5.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -304,7 +304,7 @@ td{
 }
 
 .footer-bg{
-    background-image: url(images/pp.jpg);
+    background-image: url(pp.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
