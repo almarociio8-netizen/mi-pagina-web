@@ -1,197 +1,821 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lau-Style</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <header class="header">
-        <div class="menu container">
-            <a href="#" class="logo">Logo</a>
-            <input type="checkbox" id="menu">
-            <label for="menu">
-                <img src="images/img4.jpeg" class="menu-icono" alt="">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicio</a></li>
-                    <li><a href="#">Producto</a></li>
-                    <li><a href="https://wa.me/549351549317" target="_blank">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="header-content container">
-            <div class="header-txt">
-                <h1>Lau-style</h1>
-                <p>
-                    Realzamos confianza , destacamos belleza.
-                </p>
-            </div>
-            <div class="header-dir">
-                <div class="dir">
-                    <h3>Ubicación</h3>
-                    <p>Alta Gracia,Cordoba</p>
-                </div>
-                <div class="dir">
-                    <h3>Redes Sociales</h3>
-                    <p>Ig:lau-stylelc</p>
-                    <p>Facebook:Lau-style Lcosmes</p>
-                </div>
-                <div class="dir">
-
-                    <h3>horario</h3>
-                    <p>9am a 9pm</p>
-                </div>
-            </div>
-        </div>
-
-    </header>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap');
 
 
-    <section class="welcome">
+/* =========================
+   RESET
+========================= */
 
-        <div class="welcome-1"></div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
 
-        <div class="welcome-2">
+html {
+    scroll-behavior: smooth;
+}
 
-            <h2>Bienvenidos!!</h2>
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    overflow-x: hidden;
+}
 
-            <p class="b1">
-                Bienvenidos a nuestro espacio de belleza.
-            </p>
+img {
+    max-width: 100%;
+    display: block;
+}
 
-            <p>
-                "En esta página encontrarás información sobre nuestros
-                servicios, promociones, trabajos realizados y la posibilidad de reservar tu turno. Nuestro objetivo es
-                ayudarte a resaltar tu estilo y confianza con atención profesional y personalizada."
-            </p>
-
-        </div>
-
-    </section>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 
-    <main class="services container">
-        <div class="service-txt">
-            <h2>Nuestros servicios</h2>
-            <hr>
-            <p>
-                Cuidado, estilo y profesionalismo en cada servicio para que te sientas especial.
-            </p>
-        </div>
+/* =========================
+   HEADER
+========================= */
 
-        <div class="services-group">
+.header {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
-            <div class="services-1">
-                <img src="i1.jpeg" alt="">
-                <h3>Servicio 1</h3>
-                <p>
-                    Cortes modernos y personalizados para mujeres . hombre y niños.
-                </p>
-                <a href="#">Saber mas</a>
-            </div>
 
-            <div class="services-1">
-                <img src="i2.jpeg" alt="">
-                <h3>Servicio 2</h3>
-                <p>
-                    Aplicamos tecnicas de coloración, reflejos ,balagaye y mechas para renovar tu imagen.
-                </p>
-                <a href="#">Saber mas</a>
-            </div>
+/* =========================
+   MENU
+========================= */
 
-            <div class="services-1">
-                <img src="i3.jpeg" alt="">
-                <h3>Servicio 3</h3>
-                <p>
-                    Preparación para novias , egresadas, quinceañera.
-                </p>
-                <a href="#">Saber mas</a>
-            </div>
-        </div>
-        <a href="#" class="btn-1">Informacion</a>
-    </main>
+.menu {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
 
-    <section class="prices">
-        <div class="prices-1">
-            <h2>Lista de precios</h2>
-            <p>
-                La lista de precios va depende lo que quieras hacerte pero aca tenes los precios de lo mas basico!
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Corte</th>
-                        <td>$8000 a $10000</td>
-                    </tr>
-                    <tr>
-                        <th>Color</th>
-                        <td>$40000</td>
-                    </tr>
-                    <tr>
-                        <th>Consulta por combo de peinados y maquillaje</th>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="#" class="btn-1">Informacion</a>
-        </div>
-        <div class="prices-2"></div>
-    </section>
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    <section class="personal container">
-        <div class="personal-txt">
-            <h2>Estilista</h2>
-            <hr>
-            <p>
-                Soy estilista y maquilladora profesional, apasionada por ayudar a las personas a sentirse y verse mejor.
-                Comencé este proyecto con el sueño de ofrecer un servicio personalizado, donde cada cliente reciba
-                atención, asesoramiento y resultados que reflejen su estilo único.
-                A través de la formación continua y la experiencia, me especializo en peluquería, maquillaje social y
-                asesoramiento de imagen, siempre buscando las últimas tendencias y técnicas para brindar el mejor
-                servicio.
-            </p>
-        </div>
+    padding: 15px 0;
+    z-index: 1000;
+}
 
-        <div class="personal-txt">
-            <div class="personal-1">
-                <img src="img2.jpeg" alt="">
-                <p>
-                    Laura Cosmes.
-                </p>
-            </div>
-        </div>
-    </section>
+.logo {
+    font-size: 24px;
+    color: #CF2D3A;
+    font-weight: 800;
+    text-transform: uppercase;
+}
 
-    <footer>
-        <div class="footer-bg">
-            <h2>Reserva una cita</h2>
-            <form>
-                <div class="campo-1">
-                    <input class="campo" type="text" placeholder="Nombre">
-                    <input class="campo" type="number" placeholder="Telefono">
-                </div>
-                <div class="campo-1">
-                    <input class="campo" type="text" placeholder="Direccion">
-                    <input class="campo" type="email" placeholder="Correo">
-                </div>
-                <textarea class="campo" cols="30" rows="10" placeholder="Texto"></textarea>
-                <input type="submit" value="Enviar" class="btn-1">
-            </form>
+.menu .navbar ul {
+    display: flex;
+    align-items: center;
+}
 
-        </div>
-        <div class="footer-txt">
-            <p>
-                © 2026 Lau-style. Todos los derechos reservados.
-            </p>
-        </div>
-    </footer>
+.menu .navbar ul li {
+    position: relative;
+}
 
-</body>
+.menu .navbar ul li a {
+    font-size: 16px;
+    padding: 15px 18px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
 
-</html>
+.menu .navbar ul li a:hover {
+    color: #CF2D3A;
+}
+
+
+/* CONTACTO / WHATSAPP */
+
+.menu .navbar ul li:last-child a {
+    background-color: #CF2D3A;
+    border-radius: 8px;
+    margin-left: 8px;
+    padding: 10px 18px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.menu .navbar ul li:last-child a:hover {
+    background-color: #b4272e;
+    color: #ffffff;
+}
+
+
+/* MENU MOBILE */
+
+#menu {
+    display: none;
+}
+
+.menu label {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icono {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   HEADER CONTENT
+========================= */
+
+.header-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-txt {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.header-txt h1 {
+    font-size: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    color: #CF2D3A;
+    margin-bottom: 15px;
+}
+
+.header-txt p {
+    color: #afafaf;
+    padding: 0 250px;
+    margin: 25px 0;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 25px;
+    background-color: #D82E37;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    margin: 25px 0;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-1:hover {
+    background-color: #b4272e;
+}
+
+
+/* =========================
+   INFORMACION HEADER
+========================= */
+
+.header-dir {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.dir {
+    flex: 1;
+}
+
+.dir h3 {
+    font-size: 18px;
+    color: #CF2D3A;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.dir p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    display: flex;
+    width: 100%;
+}
+
+.welcome-1 {
+    background-image: url("images/img.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    min-height: 550px;
+}
+
+.welcome-2 {
+    width: 50%;
+    padding: 100px;
+    background-color: #191919;
+}
+
+
+/* =========================
+   TITULOS
+========================= */
+
+h2 {
+    font-size: 70px;
+    line-height: 70px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 13px;
+    color: #afafaf;
+    margin: 20px 0;
+    line-height: 1.7;
+}
+
+.b1 {
+    color: #CF2D3A;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.service-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.service-txt p {
+    max-width: 700px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #CF2D3A;
+    width: 80px;
+    margin: 10px auto 20px;
+}
+
+.services-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 45px 0;
+}
+
+.services-1 {
+    background-color: #070707;
+    padding: 25px;
+    flex: 1;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.services-1:hover {
+    transform: translateY(-5px);
+}
+
+.services-1 img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.services-1 h3 {
+    font-size: 25px;
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.services-1 p {
+    font-size: 13px;
+}
+
+.services-1 a {
+    color: #CF2D3A;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.services-1 a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   PRICES
+========================= */
+
+.prices {
+    display: flex;
+    width: 100%;
+}
+
+.prices-1 {
+    width: 50%;
+    padding: 100px;
+    background-color: #191919;
+}
+
+.prices-2 {
+    width: 50%;
+    min-height: 550px;
+    background-image: url("images/img5.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+table {
+    margin: 40px 0;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #555;
+}
+
+th,
+td {
+    padding: 15px 0;
+}
+
+th {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+td {
+    color: #CF2D3A;
+    font-weight: 600;
+}
+
+
+/* =========================
+   PERSONAL
+========================= */
+
+.personal {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.personal-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.personal-txt p {
+    max-width: 850px;
+}
+
+.personal-1 {
+    text-align: center;
+}
+
+.personal-1 img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 20px auto;
+}
+
+.personal-1 p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   FOOTER / RESERVA
+========================= */
+
+.footer-bg {
+    background-image: url("images/pp.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.footer-bg h2 {
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.campo-1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.campo {
+    margin: 5px;
+    padding: 17px 15px;
+    width: 250px;
+    background-color: #0e0e0e;
+    border: 1px solid #CF2D3A;
+    outline: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.campo::placeholder {
+    color: #aaaaaa;
+}
+
+textarea {
+    width: 510px;
+    min-height: 150px;
+    resize: vertical;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-txt {
+    text-align: center;
+    padding: 15px;
+    background-color: #070707;
+}
+
+.footer-txt p {
+    margin: 0;
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   TABLET / CELULAR
+================================================== */
+
+@media (max-width: 991px) {
+
+    .container {
+        width: 90%;
+    }
+
+
+    /* MENU */
+
+    .menu {
+        width: 90%;
+        padding: 15px 0;
+    }
+
+    .menu label {
+        display: block;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+
+        background-color: #1f1f1f;
+
+        display: none;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+    }
+
+    .menu .navbar ul {
+        display: block;
+        width: 100%;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    .menu .navbar ul li a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu .navbar ul li:last-child a {
+        margin: 5px 15px 15px;
+        width: calc(100% - 30px);
+    }
+
+    #menu:checked ~ .navbar {
+        display: block;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .header-content {
+        width: 90%;
+    }
+
+    .header-txt {
+        margin-bottom: 30px;
+    }
+
+    .header-txt h1 {
+        font-size: 60px;
+        letter-spacing: 3px;
+    }
+
+    .header-txt p {
+        padding: 0;
+        margin: 15px 0;
+    }
+
+    .header-dir {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dir p {
+        font-size: 14px;
+    }
+
+
+    /* WELCOME */
+
+    .welcome {
+        flex-direction: column;
+    }
+
+    .welcome-1 {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .welcome-2 {
+        width: 100%;
+        padding: 50px 30px;
+        text-align: center;
+    }
+
+
+    /* TITULOS */
+
+    h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+
+    /* SERVICES */
+
+    .services {
+        padding: 60px 20px;
+    }
+
+    .service-txt {
+        padding: 0;
+    }
+
+    .services-group {
+        flex-direction: column;
+        gap: 20px;
+        margin: 30px 0;
+    }
+
+    .services-1 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .services-1 img {
+        height: 220px;
+    }
+
+
+    /* PRICES */
+
+    .prices {
+        flex-direction: column;
+    }
+
+    .prices-1 {
+        width: 100%;
+        padding: 50px 30px;
+        text-align: center;
+    }
+
+    .prices-2 {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    table {
+        margin: 25px 0;
+    }
+
+
+    /* PERSONAL */
+
+    .personal {
+        padding: 60px 20px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-bg {
+        padding: 60px 20px;
+    }
+
+    .campo-1 {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .campo {
+        width: 100%;
+        max-width: 400px;
+        margin: 5px 0;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 5px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULARES PEQUEÑOS
+================================================== */
+
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-icono {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header {
+        padding-top: 90px;
+        padding-bottom: 35px;
+    }
+
+    .header-txt h1 {
+        font-size: 48px;
+        letter-spacing: 2px;
+    }
+
+    .header-txt p {
+        font-size: 13px;
+    }
+
+    .header-dir {
+        gap: 10px;
+    }
+
+    .dir h3 {
+        font-size: 17px;
+    }
+
+    .dir p {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 38px;
+        line-height: 43px;
+    }
+
+    .welcome-1 {
+        min-height: 250px;
+    }
+
+    .welcome-2 {
+        padding: 40px 20px;
+    }
+
+    .services {
+        padding: 45px 15px;
+    }
+
+    .services-1 {
+        padding: 20px;
+    }
+
+    .services-1 img {
+        height: 200px;
+    }
+
+    .prices-1 {
+        padding: 45px 20px;
+    }
+
+    .prices-2 {
+        min-height: 250px;
+    }
+
+    .personal {
+        padding: 45px 15px;
+    }
+
+    .personal-1 img {
+        width: 220px;
+        height: 270px;
+    }
+
+    .footer-bg {
+        padding: 45px 15px;
+    }
+
+    .footer-bg h2 {
+        font-size: 38px;
+    }
+
+    .campo,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .btn-1 {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
