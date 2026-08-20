@@ -6,22 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lau-Style</title>
     <link rel="stylesheet" href="style.css">
-</head>
+</head> 
+
+<a href="https://wa.me/3515649317" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Contactar por WhatsApp">
+    <span>💬</span>
+</a>
 
 <body>
     <header class="header">
         <div class="menu container">
-            <a href="#" class="logo">Logo</a>
+            <a href="#" class="logo-corona">♕</a>
             <input type="checkbox" id="menu">
             <label for="menu">
-                <img src="images/img4.jpeg" class="menu-icono" alt="">
+                <img src=".images/img4.jpeg" class="menu-icono" alt="">
             </label>
             <nav class="navbar">
                 <ul>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Servicio</a></li>
                     <li><a href="#">Producto</a></li>
-                    <li><a href="https://wa.me/549351549317"target="_blank">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -56,7 +62,11 @@
 
     <section class="welcome">
 
-        <div class="welcome-1"></div>
+        <div class="welcome-1">
+            <img src="./images/img.jpeg"
+            alt="BIENVENIDOS">
+            </div>
+
 
         <div class="welcome-2">
 
@@ -78,71 +88,75 @@
 
 
     <main class="services container">
-        <div class="service-txt">
-            <h2>Nuestros servicios</h2>
-            <hr>
-            <p>
-                Cuidado, estilo y profesionalismo en cada servicio para que te sientas especial.
-            </p>
+
+    <div class="service-txt">
+        <h2>Mis servicios</h2>
+        <hr>
+        <p>
+            Cuidado, estilo y profesionalismo en cada servicio para que te sientas especial.
+        </p>
+    </div>
+
+    <div class="servicios-imagenes">
+
+        <!-- Primer collage -->
+        <div class="servicio-imagen">
+             <h1>Cortes Femeninos</h1>
+            <img src="images/servivio1.jpeg" alt="Servicios de Lau-style">
         </div>
 
-        <div class="services-group">
-
-            <div class="services-1">
-                <img src="images/i1.jpeg" alt="">
-                <h3>Servicio 1</h3>
-                <p>
-                    Cortes modernos y personalizados para mujeres . hombre y niños.
-                </p>
-                <a href="#">Saber mas</a>
-            </div>
-
-            <div class="services-1">
-                <img src="images/i2.jpeg" alt="">
-                <h3>Servicio 2</h3>
-                <p>
-                    Aplicamos tecnicas de coloración, reflejos ,balagaye y mechas para renovar tu imagen.
-                </p>
-                <a href="#">Saber mas</a>
-            </div>
-
-            <div class="services-1">
-                <img src="images/i3.jpeg" alt="">
-                <h3>Servicio 3</h3>
-                <p>
-                    Preparación para novias , egresadas, quinceañera.
-                </p>
-                <a href="#">Saber mas</a>
-            </div>
+        <!-- Segundo collage -->
+        <div class="servicio-imagen">
+            <h1>Cortes Masculinos</h1>
+            <img src="images/servicio2.jpeg" alt="Servicios de Lau-style"> 
         </div>
-        <a href="#" class="btn-1">Informacion</a>
+
+        <!-- Desde acá se OCULTAN -->
+        <div class="servicio-imagen servicio-oculto">
+            <h1>Colorimetría, Babylights, Balayage, Claritos, Iluminaciones, Alisados, etc.</h1>
+            <img src="images/servicio3.jpeg" alt="Servicios de Lau-style">
+        </div>
+
+        <div class="servicio-imagen servicio-oculto">
+            <h1>Maquillaje</h1>
+            <img src="images/img8.jpeg" alt="Maquillaje">
+        </div>
+        
+       <div class="servicio-imagen servicio-oculto">
+            <h1>Preparación de quinceañeras, egresadas, novias, etc.</h1>
+            <img src="images/img9.jpeg" alt="Peinados">
+        </div>
+
+    </div>
+
+    <button id="verMas" class="btn-1">Ver más</button>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const boton = document.getElementById("verMas");
+    const servicios = document.querySelectorAll(".servicio-oculto");
+
+    boton.addEventListener("click", function () {
+
+        servicios.forEach(function (servicio) {
+            servicio.classList.toggle("mostrar");
+        });
+
+        if (boton.textContent === "Ver más") {
+            boton.textContent = "Ver menos";
+        } else {
+            boton.textContent = "Ver más";
+        }
+
+    });
+
+    });
+    </script>
+</main>
+
+    </div>
+
     </main>
-
-    <section class="prices">
-        <div class="prices-1">
-            <h2>Lista de precios</h2>
-            <p>
-                La lista de precios va depende lo que quieras hacerte pero aca tenes los precios de lo mas basico!
-            </p>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Corte</th>
-                        <td>$8000 a $10000</td>
-                    </tr>
-                    <tr>
-                        <th>Color</th>
-                        <td>$40000</td>
-                    </tr>
-                    <tr>
-                        <th>Consulta por combo de peinados y maquillaje</th>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="#" class="btn-1">Informacion</a>
-        </div>
-        <div class="prices-2"></div>
-    </section>
 
     <section class="personal container">
         <div class="personal-txt">
@@ -192,6 +206,9 @@
         </div>
     </footer>
 
+  <a href="https://wa.me3515649317" class="btn-wsp" target="_blank"
+    img src="https://wikimedia.org" alt="WhatsApp" width="60" height="60">
+ </a> 
 </body>
 
 </html>
