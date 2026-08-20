@@ -10,6 +10,31 @@
     text-decoration: none;
     list-style: none;
 }
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float span {
+    font-size: 32px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
 
 body {
      font-family: "Poppins", sans-serif;
@@ -41,11 +66,26 @@ body {
     z-index: 1000;
 }
 
-.logo{
-    font-size: 24px;
-    color: #CF2D3A;
-    font-weight: 800;
-    text-transform: uppercase;
+.logo-corona {
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 1;
+
+    background: linear-gradient(
+        135deg,
+        #fff4a3,
+        #ff4fa3,
+        #c21875,
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    filter:
+        drop-shadow(0 0 6px #ff4fa3);
+
+    text-align: center;
 }
 
 .menu .navbar ul li {
@@ -61,7 +101,7 @@ body {
 }
 
 .menu .navbar ul li a:hover {
-    color: #CF2D3A;
+    color: #d10072;
 }
 
 #menu{
@@ -87,8 +127,7 @@ body {
     letter-spacing: 5px;
     text-transform: uppercase;
     font-family: 'Bebas Neue' , cursive;
-    color: #CF2D3A;
-    margin-bottom: 15px;
+    color: #d10072,
 }
 
 .header-txt span{
@@ -127,6 +166,7 @@ body {
 
 .dir h3{
     font-size: 18px;
+    color: #d10072;
 }
 
 .dirp{
@@ -139,17 +179,16 @@ body {
     display: flex;
 }
 
-.welcome-1{
-    background-image: url(images/img.jpeg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
+.welcome-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .welcome-2{
     width: 50%;
-    padding: 150px 250px 150px 100px;
+    padding: 130px 250px 140px 100px;
     background-color: #191919;
 }
 
@@ -160,6 +199,30 @@ h2{
     text-transform: uppercase;
     font-family: 'Bebas Neue' , cursive;
     margin-bottom: 20px;
+}
+
+h2, h1 {
+    background: linear-gradient(
+        90deg,
+        #7a003c,
+        #d10072,
+        #ff4fb3,
+        #ffd1ec,
+        #ff4fb3,
+        #d10072,
+        #7a003c
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: brilloFucsia 3s linear infinite;
+}
+
+@keyframes brilloFucsia {
+    to {
+        background-position: 200% center;
+    }
 }
 
 p{
@@ -191,26 +254,60 @@ hr{
 .services-txt{
     padding: 50px 140px;
 }
-
-.services-group{
+.services-group {
     display: flex;
-    justify-content: space-between;
-    margin: 45px 0;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+    width: 100%;
+    margin-top: 40px;
 }
 
-.services-1{
-    background-color: #070707;
-    padding: 35px 25px;
-    margin: 0 10px;
-    border-radius: 15px;
+.servicio {
+    width: 320px;
+    text-align: center;
 }
 
-.services-1 img{
+.servicios-imagenes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.servicio-imagen {
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.servicio-imagen img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    display: block;
+    border-radius: 20px;
 }
 
+.servicio p {
+    margin-top: 15px;
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+
+    .services-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .servicio {
+        width: min(85vw, 320px);
+    }
+}
 .services-1 h3{
     font-size: 25px;
     color: #ffff;
@@ -220,16 +317,18 @@ hr{
     color: #CF2D3A;
     font-size: 16px;
 }
-
-.prices{
-    display: flex;
+.servicio-oculto {
+    display: none;
 }
 
-.prices-1{
-    width: 50%;
-    padding: 150px 250px 150px 100px;
-    background-color: #191919;
+.servicio-oculto.mostrar {
+    display: block;
+}
 
+#verMas {
+    display: block;
+    margin: 30px auto;
+    cursor: pointer;
 }
 
 table{
@@ -255,12 +354,16 @@ td{
     color: #CF2D3A;
 }
 
-.prices-2{
-    background-image: url(images/img5.jpeg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.prices-2 {
     width: 50%;
+    overflow: hidden;
+}
+
+.prices-2 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .personal{
@@ -297,7 +400,7 @@ td{
 }
 
 .personal-1 p{
-    padding: 0 40px;
+    padding: 0 30px;
 }
 
 .personal-1 a{
@@ -327,7 +430,7 @@ form{
     margin: 5px;
     padding: 20px 15px;
     width: 250px;
-    background-color: #0e0e0e;
+    background-color: #191919;
     border: 1px solid #CF2D3A;
     outline: none;
     border-radius: 10px;
@@ -344,6 +447,20 @@ textarea{
     padding: 10px;
     background-color: #070707;
 }
+ .btn-wsp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+     
+    }
+
+    .btn-wsp:hover {
+    transform: scale(1.1); 
+    }
 
 @media(max-width:991px){
     .menu{
@@ -488,5 +605,5 @@ textarea{
         width: 90%;
         max-width: 1200px;
     }
-
+       
 }
